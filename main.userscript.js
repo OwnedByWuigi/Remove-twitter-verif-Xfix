@@ -3,7 +3,7 @@
 // @namespace    davidstudios.uk
 // @version      1.0-xfix
 // @description  Removes the "Get Verified" box on the Home page, the "Verified" button on the sidebar and the pesky Ad Revenue ads
-// @author       David Studios
+// @author       DavidTDC3377/OwnedByWuigi
 // @match        *://*.twitter.com/* *://*.x.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=twitter.com
 // @grant        none
