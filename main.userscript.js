@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         Remove Twitter Blue Promotions
+// @name         Remove Twitter Blue / X Premium and ad revenue ads
 // @namespace    davidstudios.uk
-// @version      1.0
-// @description  Removes the "Get Verified" box on the Home page and the "Verified" button on the sidebar
+// @version      1.0-xfix
+// @description  Removes the "Get Verified" box on the Home page, the "Verified" button on the sidebar and the pesky Ad Revenue ads
 // @author       David Studios
-// @match        *://*.twitter.com/*
+// @match        *://*.twitter.com/* *://*.x.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=twitter.com
 // @grant        none
 // ==/UserScript==
@@ -55,6 +55,16 @@
         waitForElement(document, "aside[aria-label='Get Verified']", (element) => {
             element.parentElement?.remove();
         }, false);
+        
+        waitForElement(document, "aside[aria-label='X Premium']", (element) => {
+            element.parentElement?.remove();
+        }, false);
+
+        
+        waitForElement(document, "aside[aria-label='You may be missing out on ads revenue sharing!']", (element) => {
+            element.parentElement?.remove();
+        }, false);
+        
         waitForElement(document, "a[aria-label='Verified'][href='/i/verified-choose']", (element) => {
             element.remove();
         }, false);
