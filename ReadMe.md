@@ -1,4 +1,4 @@
-## Remove Twitter 🐦 Verification
+## Remove Twitter/X Verification
 
 Twitter, oh sorry, Xcuse me.
 
@@ -8,8 +8,6 @@ Want these pesky ads gone? No problem!
 
 All you need to do is paste it into a userscript-supported extension like TamperMonkey.
 
+___
 
-# What does this fork do?
-This fork adds blocking for X Premium and ad revenue ads inside X.
-
-*(Created by DavidTDC3377/David Studios, X fix by OwnedByWuigi)*
+*(Created by DavidTDC3377, X fix by @OwnedByWuigi)*
