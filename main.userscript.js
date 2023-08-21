@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Remove Twitter Blue / X Premium and ad revenue ads
+// @name         Remove Twitter Blue / X Premium nags and ad revenue ads
 // @namespace    davidstudios.uk
-// @version      1.0-xfix
-// @description  Removes the "Get Verified" box on the Home page, the "Verified" button on the sidebar and the pesky Ad Revenue ads
+// @version      1.1-rc
+// @description  Removes the Eloninization from Twitter
 // @author       DavidTDC3377/OwnedByWuigi
 // @match        *://*.twitter.com/* *://*.x.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=x.com
@@ -52,7 +52,7 @@
         });
     }
     onReady(() => {
-        waitForElement(document, "aside[aria-label='Get Verified']", (element) => {
+        waitForElement(document, "aside[aria-label='Get Verified']", (element) => { // is this nag still there?
             element.parentElement?.remove();
         }, false);
         
@@ -60,6 +60,9 @@
             element.parentElement?.remove();
         }, false);
 
+        waitForElement(document, "aside[aria-label='Twitter Blue']", (element) => { // just in case elon is lazy, might remove soon
+            element.parentElement?.remove();
+        }, false);
         
         waitForElement(document, "aside[aria-label='You may be missing out on ads revenue sharing!']", (element) => {
             element.parentElement?.remove();
